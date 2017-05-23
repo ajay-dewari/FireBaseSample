@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ajaysinghdewari.firebasesample.HomeActivity">
+    tools:context="com.ajaysinghdewari.firebasesample.activities.HomeActivity">
 
     <RelativeLayout
         android:id="@+id/content"
@@ -22,11 +22,42 @@
             android:layout_height="wrap_content"
             android:text="Welcome Home"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_welcome"
+            android:layout_margin="20dp"
+            android:hint="Name"
+            />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/et_name"
+            android:hint="Address"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/et_address"
+            android:text="Sign up"
+            />
+
+
         <TextView
             android:id="@+id/btn_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_welcome"
+            android:layout_below="@+id/btn_signup"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"

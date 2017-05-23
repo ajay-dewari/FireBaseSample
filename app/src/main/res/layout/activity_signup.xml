@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:padding="25dp"
-    tools:context="com.ajaysinghdewari.firebasesample.SignUpActivity">
+    tools:context="com.ajaysinghdewari.firebasesample.activities.SignUpActivity">
 
     <EditText
         android:id="@+id/et_email"
