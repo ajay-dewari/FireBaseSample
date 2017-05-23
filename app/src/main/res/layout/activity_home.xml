@@ -39,7 +39,6 @@
             android:layout_margin="20dp"
             android:layout_below="@+id/et_name"
             android:hint="Address"
-            android:inputType="textPassword"
             />
 
         <Button
@@ -48,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_below="@+id/et_address"
-            android:text="Sign up"
+            android:text="Save data"
             />
 
 

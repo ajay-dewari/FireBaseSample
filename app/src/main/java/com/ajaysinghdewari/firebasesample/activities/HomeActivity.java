@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ajaysinghdewari.firebasesample.R;
+import com.ajaysinghdewari.firebasesample.models.UserInformation;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -79,13 +81,32 @@ public class HomeActivity extends AppCompatActivity {
         mBtnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveUserData();
+                saveUserInfo();
             }
         });
     }
 
-private void saveUserData(){
+private void saveUserInfo(){
+    String name=mEtName.getText().toString();
+    String address=mEtAddress.getText().toString();
 
+    if(name.isEmpty() || name==null){
+        Toast.makeText(this, "Please enter a valid name", Toast.LENGTH_LONG).show();
+        return;
+    }
+
+    if(address.isEmpty() || address==null){
+        Toast.makeText(this, "address can't be empty", Toast.LENGTH_LONG).show();
+        return;
+    }
+    UserInformation userInfo=new UserInformation(name, address);
+
+    //now we will create a child of the user to database
+
+    FirebaseUser user=mFireBaseAuth.getCurrentUser();
+    mDatabaseReferance.child(user.getUid()).setValue(user);
+
+    Toast.makeText(this, "Info is saved", Toast.LENGTH_LONG).show();
 }
 
 }
