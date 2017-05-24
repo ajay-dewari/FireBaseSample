@@ -104,7 +104,7 @@ private void saveUserInfo(){
     //now we will create a child of the user to database
 
     FirebaseUser user=mFireBaseAuth.getCurrentUser();
-    mDatabaseReferance.child(user.getUid()).setValue(user);
+    mDatabaseReferance.child(user.getUid()).setValue(userInfo);
 
     Toast.makeText(this, "Info is saved", Toast.LENGTH_LONG).show();
 }

@@ -7,8 +7,16 @@ package com.ajaysinghdewari.firebasesample.models;
 public class UserInformation {
     private String name, address;
 
-public UserInformation(String name, String address){
-    this.name=name;
-    this.address=address;
-}
+    public UserInformation(String name, String address){
+        this.name=name;
+        this.address=address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }
