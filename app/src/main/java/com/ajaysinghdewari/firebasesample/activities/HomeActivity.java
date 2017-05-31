@@ -151,9 +151,9 @@ private void saveUserInfo(){
             final ProgressDialog progressDialog=new ProgressDialog(this);
             progressDialog.setTitle("Uploading");
             progressDialog.show();
-            StorageReference riversRef = mStorageRef.child("images/photo.jpg");
+            StorageReference imgStorageRef=mStorageRef.child("images/photo.jpg");
 
-            riversRef.putFile(file)
+            imgStorageRef.putFile(file)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
